@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QCrKRXzdWRZaAxpPk7zUbYBixYXIHxNDsgcmo4bJW4TvCqxjs7U/R1cWgH+ab3i1SQC4gI85RJe/KBZFX8POOA==",
+  "dgSpecHash": "1+U6TfZud0/TcoAfH4R54OjCno8ByJdeWA0LM+KSR0RSt7i/hv7NM73JfLYgFmclk1N5w9HPC4kd7WiPSKNofA==",
   "success": true,
-  "projectFilePath": "C:\\netprojects\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj",
+  "projectFilePath": "C:\\netprojects\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

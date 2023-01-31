@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BPzSF86syxX/WfdpBVEXjAr6HhVoOavyUDWYMqWs4cP+ZY8G91aZYtGe0H+aiO6y8FUfBOsP/zDBnYm4Ghh24A==",
+  "dgSpecHash": "7a82hrP/RHGwHzvbpEgPsae9Aa2DI3E7G+sGe2VZ6y+03c5pNDYkGGVbHl9YVyoR6R5jTN+DXuMIl97WDVQTUQ==",
   "success": true,
-  "projectFilePath": "C:\\netprojects\\AlaskSolucion\\Alask.API\\Alask.API.csproj",
+  "projectFilePath": "C:\\netprojects\\BackendAlask\\AlaskSolucion\\Alask.API\\Alask.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\usuario\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\usuario\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
