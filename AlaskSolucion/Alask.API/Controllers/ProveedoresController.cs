@@ -7,20 +7,48 @@ using System.Xml.Linq;
 
 namespace Alask.API {
 
-	[Route("api/[controller]")]
-	[ApiController]
+    [ApiController]
+    [Route("api/[controller]")]
 
-	public class ProveedoresController : Controller {
+    public class ProveedoresController : Controller {
 
 
         [Route("[action]")]
         [HttpPost]
-        public async Task<ActionResult<Proveedor>> GetProveedoresTodos([FromBody] Proveedor proveedores)
-		{
-			var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
-			XDocument xmlParam = DBXmlMethods.GetXml(proveedores);
-			DataSet dsResultado = await DBXmlMethods.EjecutaBase("Proveedores_GetProveedores", cadenaConexion, "consultar_todo", xmlParam.ToString());
-			List<Proveedor> listData = new List<Proveedor>();
+        public async Task<ActionResult<Proveedor>> GetAll([FromBody] Proveedor proveedor)
+        {
+            var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
+            XDocument xmlParam = DBXmlMethods.GetXml(proveedor);
+            DataSet dsResultado = await DBXmlMethods.EjecutaBase("GetProveedores", cadenaConexion, "consultar_todo", xmlParam.ToString());
+            List<Proveedor> listData = new List<Proveedor>();
+
+            return Ok(listData);
+        }
+
+
+
+        [Route("[action]")]
+        [HttpPost]
+        public async Task<ActionResult<Proveedor>> GetById([FromBody] Proveedor proveedor)
+        {
+            var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
+            XDocument xmlParam = DBXmlMethods.GetXml(proveedor);
+            DataSet dsResultado = await DBXmlMethods.EjecutaBase("GetProveedores", cadenaConexion, "consultar_porId", xmlParam.ToString());
+            List<Proveedor> listData = new List<Proveedor>();
+
+            return Ok(listData);
+        }
+
+
+
+        [Route("[action]")]
+        [HttpPost]
+        public async Task<ActionResult<Proveedor>> GetByName([FromBody] Proveedor proveedor)
+        {
+            var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
+            XDocument xmlParam = DBXmlMethods.GetXml(proveedor);
+            DataSet dsResultado = await DBXmlMethods.EjecutaBase("GetProveedores", cadenaConexion, "consultar_porNombre", xmlParam.ToString());
+            List<Proveedor> listData = new List<Proveedor>();
 
             return Ok(listData);
         }
