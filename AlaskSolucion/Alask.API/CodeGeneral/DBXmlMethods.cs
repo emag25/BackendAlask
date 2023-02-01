@@ -1,8 +1,8 @@
 ﻿using System.Xml.Linq;
 using System.Xml.Serialization;
 using System.Data;
-using System.Data.SqlC1ient;
 using System.Xml;
+using System.Data.SqlClient;
 
 namespace Alask.API.CodeGeneral
 {
@@ -24,9 +24,43 @@ namespace Alask.API.CodeGeneral
         }
 
 
+        public static async Task<DataSet> EjecutaBase(string nombreProcedimiento, string cadenaConexion, string transaccion, string dataXML)
+        {
 
+            DataSet dsResuItado = new DataSet();
+            SqlConnection cnn = new SqlConnection(cadenaConexion);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                SqlDataAdapter adt = new SqlDataAdapter();
+                cmd.CommandText = nombreProcedimiento;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Connection = cnn;
+                cmd.CommandTimeout = 120;
+                cmd.Parameters.Add("@i_transaccion", SqlDbType.VarChar).Value = transaccion;
+                cmd.Parameters.Add("@i_xml", SqlDbType.Xml).Value = dataXML.ToString();
+                await cnn.OpenAsync().ConfigureAwait(false);
+                adt = new SqlDataAdapter(cmd);
+                adt.Fill(dsResuItado);
+                cmd.Dispose();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                Console.Write("Logs", "EjecutaBase", ex.ToString());
+                cnn.Close();
+            }
 
-
+            finally
+            {
+                if (cnn.State == ConnectionState.Open)
+                {
+                    cnn.Close();
+                }
+            }
+            return dsResuItado;
+        }
 
     }
+
 }

@@ -19,13 +19,13 @@ namespace Alask.API {
 		{
 			var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
 			XDocument xmlParam = DBXmlMethods.GetXml(proveedores);
-			DataSet dsResultado = await DBXmlMethods.EjecutaBase("Proveedores_GetProveedores", cadenaConexion, "consultar_todo", xmlParam.toString());
+			DataSet dsResultado = await DBXmlMethods.EjecutaBase("Proveedores_GetProveedores", cadenaConexion, "consultar_todo", xmlParam.ToString());
 			List<Proveedor> listData = new List<Proveedor>();
 
             return Ok(listData);
-		}
+        }
 
 
-	}
+    }
 
 }
