@@ -17,10 +17,10 @@ namespace Alask.API
 
         [Route("[action]")]
         [HttpPost]
-        public async Task<ActionResult<Usuarios>> GetUsuariosTodos([FromBody] Usuario usuarios)
+        public async Task<ActionResult<Usuario>> GetUsuariosTodos([FromBody] Usuario usuarios)
         {
             var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
-            XDocument xmlParam = DBXmlMethods.GetXml(proveedores);
+            XDocument xmlParam = DBXmlMethods.GetXml(usuarios);
             DataSet dsResultado = await DBXmlMethods.EjecutaBase("Usuarios_GetUsuarios", cadenaConexion, "consultar_todo", xmlParam.ToString());
             List<Usuario> listData = new List<Usuario>();
 
@@ -29,4 +29,5 @@ namespace Alask.API
 
 
     }
+}
 
