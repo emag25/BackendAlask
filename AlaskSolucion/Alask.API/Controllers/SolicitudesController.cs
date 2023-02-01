@@ -14,11 +14,11 @@ namespace Alask.API {
 
 
         [Route("[action]")]
-        [HttpPost]
-        public async Task<ActionResult<Solicitud>> GetAll([FromBody] Solicitud solicitud)
+        [HttpGet]
+        public async Task<ActionResult<Solicitud>> GetAll()
         {
             var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
-            XDocument xmlParam = DBXmlMethods.GetXml(solicitud);
+            XDocument xmlParam = DBXmlMethods.GetXml(new Solicitud());
             DataSet dsResultado = await DBXmlMethods.EjecutaBase("GetSolicitudes", cadenaConexion, "consultar_todo", xmlParam.ToString());
             List<Solicitud> listData = new List<Solicitud>();
 

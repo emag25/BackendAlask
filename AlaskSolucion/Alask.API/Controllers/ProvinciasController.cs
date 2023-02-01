@@ -14,11 +14,11 @@ namespace Alask.API {
 
 
         [Route("[action]")]
-        [HttpPost]
-        public async Task<ActionResult<Provincia>> GetAll([FromBody] Provincia provincia)
+        [HttpGet]
+        public async Task<ActionResult<Provincia>> GetAll()
         {
             var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
-            XDocument xmlParam = DBXmlMethods.GetXml(provincia);
+            XDocument xmlParam = DBXmlMethods.GetXml(new Provincia());
             DataSet dsResultado = await DBXmlMethods.EjecutaBase("GetProvincias", cadenaConexion, "consultar_todo", xmlParam.ToString());
             List<Provincia> listData = new List<Provincia>();
 
@@ -28,8 +28,8 @@ namespace Alask.API {
 
 
         [Route("[action]")]
-        [HttpPost]
-        public async Task<ActionResult<Provincia>> GetById([FromBody] Provincia provincia)
+        [HttpGet]
+        public async Task<ActionResult<Provincia>> GetById([FromQuery] Provincia provincia)
         {
             var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
             XDocument xmlParam = DBXmlMethods.GetXml(provincia);
@@ -42,8 +42,8 @@ namespace Alask.API {
 
 
         [Route("[action]")]
-        [HttpPost]
-        public async Task<ActionResult<Provincia>> GetByName([FromBody] Provincia provincia)
+        [HttpGet]
+        public async Task<ActionResult<Provincia>> GetByName([FromQuery] Provincia provincia)
         {
             var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
             XDocument xmlParam = DBXmlMethods.GetXml(provincia);

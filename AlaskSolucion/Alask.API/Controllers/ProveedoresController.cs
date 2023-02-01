@@ -14,11 +14,11 @@ namespace Alask.API {
 
 
         [Route("[action]")]
-        [HttpPost]
-        public async Task<ActionResult<Proveedor>> GetAll([FromBody] Proveedor proveedor)
+        [HttpGet]
+        public async Task<ActionResult<Proveedor>> GetAll()
         {
             var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
-            XDocument xmlParam = DBXmlMethods.GetXml(proveedor);
+            XDocument xmlParam = DBXmlMethods.GetXml(new Proveedor());
             DataSet dsResultado = await DBXmlMethods.EjecutaBase("GetProveedores", cadenaConexion, "consultar_todo", xmlParam.ToString());
             List<Proveedor> listData = new List<Proveedor>();
 
@@ -28,8 +28,8 @@ namespace Alask.API {
 
 
         [Route("[action]")]
-        [HttpPost]
-        public async Task<ActionResult<Proveedor>> GetById([FromBody] Proveedor proveedor)
+        [HttpGet]
+        public async Task<ActionResult<Proveedor>> GetById([FromQuery] Proveedor proveedor)
         {
             var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
             XDocument xmlParam = DBXmlMethods.GetXml(proveedor);
@@ -42,8 +42,8 @@ namespace Alask.API {
 
 
         [Route("[action]")]
-        [HttpPost]
-        public async Task<ActionResult<Proveedor>> GetByName([FromBody] Proveedor proveedor)
+        [HttpGet]
+        public async Task<ActionResult<Proveedor>> GetByName([FromQuery] Proveedor proveedor)
         {
             var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
             XDocument xmlParam = DBXmlMethods.GetXml(proveedor);
