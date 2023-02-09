@@ -78,3 +78,4 @@ C:\proyectos_angular_daw\BackendAlask\AlaskSolucion\Alask.API\obj\Debug\net6.0\s
 C:\proyectos_angular_daw\BackendAlask\AlaskSolucion\Alask.API\obj\Debug\net6.0\Alask.API.csproj.CopyComplete
 C:\proyectos_angular_daw\BackendAlask\AlaskSolucion\Alask.API\obj\Debug\net6.0\Alask.API.genruntimeconfig.cache
 C:\proyectos_angular_daw\BackendAlask\AlaskSolucion\Alask.API\obj\Debug\net6.0\ref\Alask.API.dll
+C:\proyectos_angular_daw\BackendAlask\AlaskSolucion\Alask.API\bin\Debug\net6.0\Newtonsoft.Json.dll
