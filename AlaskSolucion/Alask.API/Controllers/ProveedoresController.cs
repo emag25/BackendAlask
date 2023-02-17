@@ -14,45 +14,47 @@ namespace Alask.API {
 
 
         [Route("[action]")]
-        [HttpGet]
-        public async Task<ActionResult<Proveedor>> GetAll()
+        [HttpPost]
+        public async Task<ActionResult<Proveedor>> Get([FromBody] Proveedor p)
         {
             var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
-            XDocument xmlParam = DBXmlMethods.GetXml(new Proveedor());
-            DataSet dsResultado = await DBXmlMethods.EjecutaBase("GetProveedores", cadenaConexion, "consultar_todo", xmlParam.ToString());
+            XDocument xmlParam = DBXmlMethods.GetXml(p);
+            DataSet dsResultado = await DBXmlMethods.EjecutaBase(SPNames.GetProveedores, cadenaConexion, p.Transaccion, xmlParam.ToString());
             List<Proveedor> listData = new List<Proveedor>();
+
+            if (dsResultado.Tables.Count > 0)
+            {
+                try
+                {
+                    foreach(DataRow row in dsResultado.Tables[0].Rows) 
+                    {
+                        Proveedor objResponse = new Proveedor
+                        {
+                            Id = Convert.ToInt32(row["id_proveedor"]),
+                            Ruc = row["ruc_proveedor"].ToString(),
+                            Nombre = row["nombre_proveedor"].ToString(),
+                            Email = row["email_proveedor"].ToString(),
+                            Telefono = row["telefono_proveedor"].ToString(),
+                            Provincia = new Provincia()
+                            {
+                                Id = Convert.ToInt32(row["id_provincia"]),
+                                Nombre = row["nombre_provincia"].ToString()
+                            },
+                            Logo = row["logo_proveedor"].ToString(),
+                            FechaAprobacion = DateOnly.FromDateTime(DateTime.Parse(row["fechaAprobacion_proveedor"].ToString())),
+                            Estado = row["estado_proveedor"].ToString()
+                        };
+                        listData.Add(objResponse);
+                    }
+
+                }catch(Exception ex)
+                {
+                    Console.WriteLine("---- ERROR ---- "+ex.Message);
+                }
+            }
 
             return Ok(listData);
         }
-
-
-
-        [Route("[action]")]
-        [HttpGet]
-        public async Task<ActionResult<Proveedor>> GetById([FromQuery] Proveedor proveedor)
-        {
-            var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
-            XDocument xmlParam = DBXmlMethods.GetXml(proveedor);
-            DataSet dsResultado = await DBXmlMethods.EjecutaBase("GetProveedores", cadenaConexion, "consultar_porId", xmlParam.ToString());
-            List<Proveedor> listData = new List<Proveedor>();
-
-            return Ok(listData);
-        }
-
-
-
-        [Route("[action]")]
-        [HttpGet]
-        public async Task<ActionResult<Proveedor>> GetByName([FromQuery] Proveedor proveedor)
-        {
-            var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
-            XDocument xmlParam = DBXmlMethods.GetXml(proveedor);
-            DataSet dsResultado = await DBXmlMethods.EjecutaBase("GetProveedores", cadenaConexion, "consultar_porNombre", xmlParam.ToString());
-            List<Proveedor> listData = new List<Proveedor>();
-
-            return Ok(listData);
-        }
-
 
     }
 

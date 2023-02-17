@@ -14,13 +14,44 @@ namespace Alask.API {
 
 
         [Route("[action]")]
-        [HttpGet]
-        public async Task<ActionResult<Solicitud>> GetAll()
+        [HttpPost]
+        public async Task<ActionResult<Solicitud>> Get([FromBody] Solicitud s)
         {
             var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
-            XDocument xmlParam = DBXmlMethods.GetXml(new Solicitud());
-            DataSet dsResultado = await DBXmlMethods.EjecutaBase("GetSolicitudes", cadenaConexion, "consultar_todo", xmlParam.ToString());
+            XDocument xmlParam = DBXmlMethods.GetXml(s);
+            DataSet dsResultado = await DBXmlMethods.EjecutaBase(SPNames.GetSolicitudes, cadenaConexion, s.Transaccion, xmlParam.ToString());
             List<Solicitud> listData = new List<Solicitud>();
+
+            if (dsResultado.Tables.Count > 0)
+            {
+                try
+                {
+                    foreach (DataRow row in dsResultado.Tables[0].Rows)
+                    {
+                        Solicitud objResponse = new Solicitud
+                        {
+                            Id = Convert.ToInt32(row["id_Solicitud"]),
+                            Ruc = row["ruc_Solicitud"].ToString(),
+                            Nombre = row["nombre_Solicitud"].ToString(),
+                            Email = row["email_Solicitud"].ToString(),
+                            Telefono = row["telefono_Solicitud"].ToString(),
+                            Provincia = new Provincia()
+                            {
+                                Id = Convert.ToInt32(row["id_provincia"]),
+                                Nombre = row["nombre_provincia"].ToString()
+                            },
+                            FechaEnvio = DateOnly.FromDateTime(DateTime.Parse(row["fechaEnvio_Solicitud"].ToString())),
+                            Estado = row["estado_Solicitud"].ToString()
+                        };
+                        listData.Add(objResponse);
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("---- ERROR ---- " + ex.Message);
+                }
+            }
 
             return Ok(listData);
         }

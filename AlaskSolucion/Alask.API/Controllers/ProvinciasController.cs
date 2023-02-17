@@ -14,45 +14,37 @@ namespace Alask.API {
 
 
         [Route("[action]")]
-        [HttpGet]
-        public async Task<ActionResult<Provincia>> GetAll()
+        [HttpPost]
+        public async Task<ActionResult<Provincia>> Get([FromBody] Provincia p)
         {
             var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
-            XDocument xmlParam = DBXmlMethods.GetXml(new Provincia());
-            DataSet dsResultado = await DBXmlMethods.EjecutaBase("GetProvincias", cadenaConexion, "consultar_todo", xmlParam.ToString());
+            XDocument xmlParam = DBXmlMethods.GetXml(p);
+            DataSet dsResultado = await DBXmlMethods.EjecutaBase(SPNames.GetProvincias, cadenaConexion, p.Transaccion, xmlParam.ToString());
             List<Provincia> listData = new List<Provincia>();
+
+            if (dsResultado.Tables.Count > 0)
+            {
+                try
+                {
+                    foreach (DataRow row in dsResultado.Tables[0].Rows)
+                    {
+                        Provincia objResponse = new Provincia
+                        {
+                            Id = Convert.ToInt32(row["id_provincia"]),
+                            Nombre = row["nombre_provincia"].ToString()
+                        };
+                        listData.Add(objResponse);
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("---- ERROR ---- " + ex.Message);
+                }
+            }
 
             return Ok(listData);
         }
-
-
-
-        [Route("[action]")]
-        [HttpGet]
-        public async Task<ActionResult<Provincia>> GetById([FromQuery] Provincia provincia)
-        {
-            var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
-            XDocument xmlParam = DBXmlMethods.GetXml(provincia);
-            DataSet dsResultado = await DBXmlMethods.EjecutaBase("GetProvincias", cadenaConexion, "consultar_porId", xmlParam.ToString());
-            List<Provincia> listData = new List<Provincia>();
-
-            return Ok(listData);
-        }
-
-
-
-        [Route("[action]")]
-        [HttpGet]
-        public async Task<ActionResult<Provincia>> GetByName([FromQuery] Provincia provincia)
-        {
-            var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
-            XDocument xmlParam = DBXmlMethods.GetXml(provincia);
-            DataSet dsResultado = await DBXmlMethods.EjecutaBase("GetProvincias", cadenaConexion, "consultar_porNombre", xmlParam.ToString());
-            List<Provincia> listData = new List<Provincia>();
-
-            return Ok(listData);
-        }
-
 
     }
 

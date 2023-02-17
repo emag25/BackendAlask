@@ -12,6 +12,7 @@ namespace Alask.BL
         public string? Logo { get; set;}
         public DateOnly? FechaAprobacion { get; set; }
         public string? Estado { get; set; }
+        public string? Transaccion { get; set; }
 
     }
 }

@@ -11,6 +11,7 @@ namespace Alask.BL
         public Provincia? Provincia { get; set; }
         public DateOnly? FechaEnvio { get; set; }
         public string? Estado { get; set; }
+        public string? Transaccion { get; set; }
 
     }
 }

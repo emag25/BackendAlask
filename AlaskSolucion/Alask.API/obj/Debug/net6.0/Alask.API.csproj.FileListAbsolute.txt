@@ -38,3 +38,6 @@ C:\netprojects\BackendAlask\AlaskSolucion\Alask.API\obj\Debug\net6.0\refint\Alas
 C:\netprojects\BackendAlask\AlaskSolucion\Alask.API\obj\Debug\net6.0\Alask.API.pdb
 C:\netprojects\BackendAlask\AlaskSolucion\Alask.API\obj\Debug\net6.0\Alask.API.genruntimeconfig.cache
 C:\netprojects\BackendAlask\AlaskSolucion\Alask.API\obj\Debug\net6.0\ref\Alask.API.dll
+C:\netprojects\BackendAlask\AlaskSolucion\Alask.API\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\netprojects\BackendAlask\AlaskSolucion\Alask.API\bin\Debug\net6.0\System.Text.Json.dll
+C:\netprojects\BackendAlask\AlaskSolucion\Alask.API\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
