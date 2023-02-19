@@ -14,7 +14,7 @@ namespace Alask.API {
 
 
         [Route("[action]")]
-        [HttpPost]
+        [HttpGet]
         public async Task<ActionResult<Proveedor>> GetProveedoresTodos([FromBody] Proveedor proveedores)
 		{
 			var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
