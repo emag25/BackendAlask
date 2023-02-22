@@ -1,9 +1,10 @@
 ﻿namespace Alask.BL
 {
-    public class Categoria
+    public class Favorito
     {
         public int? Id { get; set; }
-        public string? Nombre { get; set; }
+        public Usuario? Usuario { get; set; }
+        public Producto? Producto { get; set; }
 
         public DateOnly? FechaIngreso { get; set; }
 
