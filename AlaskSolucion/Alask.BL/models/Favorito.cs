@@ -3,8 +3,8 @@
     public class Favorito
     {
         public int? Id { get; set; }
-        public Usuario? Usuario { get; set; }
-        public Producto? Producto { get; set; }
+        public int? Usuario { get; set; }
+        public int? Producto { get; set; }
 
         public DateOnly? FechaIngreso { get; set; }
 

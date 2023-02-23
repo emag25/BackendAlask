@@ -36,29 +36,8 @@ namespace Alask.API
                             Imagen = row["imagen_producto"].ToString(),
                             Precio = float.Parse(row["precio_producto"].ToString()),
                             Stock = int.Parse(row["stock_producto"].ToString()),
-                            Categoria = new Categoria()
-                            {
-                                Id = Convert.ToInt32(row["id_categoria"]),
-                                Nombre = row["nombre_categoria"].ToString(),
-                                FechaIngreso = DateOnly.FromDateTime(DateTime.Parse(row["fechaingreso_categoria"].ToString())),
-                                Estado = row["estado_categoria"].ToString()
-                            },
-                            Proveedor = new Proveedor()
-                            {
-                                Id = Convert.ToInt32(row["id_proveedor"]),
-                                Ruc = row["ruc_proveedor"].ToString(),
-                                Nombre = row["nombre_proveedor"].ToString(),
-                                Email = row["email_proveedor"].ToString(),
-                                Telefono = row["telefono_proveedor"].ToString(),
-                                Provincia = new Provincia()
-                                {
-                                    Id = Convert.ToInt32(row["id_provincia"]),
-                                    Nombre = row["nombre_provincia"].ToString()
-                                },
-                                Logo = row["logo_proveedor"].ToString(),
-                                FechaAprobacion = DateOnly.FromDateTime(DateTime.Parse(row["fechaAprobacion_proveedor"].ToString())),
-                                Estado = row["estado_proveedor"].ToString()
-                            },
+                            Categoria = Convert.ToInt32(row["categoria_producto"]),                            
+                            Proveedor = Convert.ToInt32(row["proveedor_producto"]),
                             FechaIngreso = DateOnly.FromDateTime(DateTime.Parse(row["fechaingreso_producto"].ToString())),
                             Estado = row["estado_producto"].ToString()
                         };
