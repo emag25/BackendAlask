@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.API\\Alask.API.csproj": {}
+    "C:\\Users\\HP\\Desktop\\ANGULAR\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.API\\Alask.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.API\\Alask.API.csproj": {
+    "C:\\Users\\HP\\Desktop\\ANGULAR\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.API\\Alask.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.API\\Alask.API.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\ANGULAR\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.API\\Alask.API.csproj",
         "projectName": "Alask.API",
-        "projectPath": "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.API\\Alask.API.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.API\\obj\\",
+        "projectPath": "C:\\Users\\HP\\Desktop\\ANGULAR\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.API\\Alask.API.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\ANGULAR\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj": {
-                "projectPath": "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj"
+              "C:\\Users\\HP\\Desktop\\ANGULAR\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj": {
+                "projectPath": "C:\\Users\\HP\\Desktop\\ANGULAR\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj"
               }
             }
           }
@@ -80,17 +80,17 @@
         }
       }
     },
-    "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj": {
+    "C:\\Users\\HP\\Desktop\\ANGULAR\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\ANGULAR\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj",
         "projectName": "Alask.BL",
-        "projectPath": "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.BL\\obj\\",
+        "projectPath": "C:\\Users\\HP\\Desktop\\ANGULAR\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\ANGULAR\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.BL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

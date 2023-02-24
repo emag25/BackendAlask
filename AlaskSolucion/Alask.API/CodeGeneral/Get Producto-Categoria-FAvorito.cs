@@ -13,6 +13,10 @@ namespace Alask.API.CodeGeneral
         public const string GetProveedores = "GetProveedores";
 
         public const string GetSolicitudes = "GetSolicitudes";
+
+        public const string GetCarritos = "Carritos_getCarritos";
+
+        public const string GetVentas = "Ventas_GetVentas";
         //
         public const string SetCategorias = "Categoria_setCategoria";
 
