@@ -8,11 +8,16 @@
     "net6.0": []
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\pauli\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\user\\.nuget\\packages\\": {}
+>>>>>>> Ruben
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\proyectos_angular_daw\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj",
       "projectName": "Alask.BL",
       "projectPath": "C:\\proyectos_angular_daw\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj",
@@ -21,6 +26,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pauli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj",
+      "projectName": "Alask.BL",
+      "projectPath": "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.BL\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Ruben
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

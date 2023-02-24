@@ -10,15 +10,3 @@ C:\netprojects\BackendAlask\AlaskSolucion\Alask.BL\obj\Debug\net6.0\Alask.BL.dll
 C:\netprojects\BackendAlask\AlaskSolucion\Alask.BL\obj\Debug\net6.0\refint\Alask.BL.dll
 C:\netprojects\BackendAlask\AlaskSolucion\Alask.BL\obj\Debug\net6.0\Alask.BL.pdb
 C:\netprojects\BackendAlask\AlaskSolucion\Alask.BL\obj\Debug\net6.0\ref\Alask.BL.dll
-C:\proyectos_angular_daw\BackendAlask\AlaskSolucion\Alask.BL\obj\Debug\net6.0\Alask.BL.dll
-C:\proyectos_angular_daw\BackendAlask\AlaskSolucion\Alask.BL\obj\Debug\net6.0\refint\Alask.BL.dll
-C:\proyectos_angular_daw\BackendAlask\AlaskSolucion\Alask.BL\obj\Debug\net6.0\Alask.BL.pdb
-C:\proyectos_angular_daw\BackendAlask\AlaskSolucion\Alask.BL\bin\Debug\net6.0\Alask.BL.deps.json
-C:\proyectos_angular_daw\BackendAlask\AlaskSolucion\Alask.BL\bin\Debug\net6.0\Alask.BL.dll
-C:\proyectos_angular_daw\BackendAlask\AlaskSolucion\Alask.BL\bin\Debug\net6.0\Alask.BL.pdb
-C:\proyectos_angular_daw\BackendAlask\AlaskSolucion\Alask.BL\obj\Debug\net6.0\Alask.BL.csproj.AssemblyReference.cache
-C:\proyectos_angular_daw\BackendAlask\AlaskSolucion\Alask.BL\obj\Debug\net6.0\Alask.BL.GeneratedMSBuildEditorConfig.editorconfig
-C:\proyectos_angular_daw\BackendAlask\AlaskSolucion\Alask.BL\obj\Debug\net6.0\Alask.BL.AssemblyInfoInputs.cache
-C:\proyectos_angular_daw\BackendAlask\AlaskSolucion\Alask.BL\obj\Debug\net6.0\Alask.BL.AssemblyInfo.cs
-C:\proyectos_angular_daw\BackendAlask\AlaskSolucion\Alask.BL\obj\Debug\net6.0\Alask.BL.csproj.CoreCompileInputs.cache
-C:\proyectos_angular_daw\BackendAlask\AlaskSolucion\Alask.BL\obj\Debug\net6.0\ref\Alask.BL.dll
