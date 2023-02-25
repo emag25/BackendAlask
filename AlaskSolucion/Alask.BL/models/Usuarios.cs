@@ -12,6 +12,8 @@
         public Provincia? provincia { get; set; }
         public string? rol { get; set; }
         public DateOnly FechaIngreso { get; set; }
+        public string? Transaccion { get; set; }
+
 
     }
 }

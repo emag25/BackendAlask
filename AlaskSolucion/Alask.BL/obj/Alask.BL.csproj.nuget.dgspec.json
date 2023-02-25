@@ -1,21 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\netprojects\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj": {}
+    "C:\\proyectos_angular_daw\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj": {}
   },
   "projects": {
-    "C:\\netprojects\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj": {
+    "C:\\proyectos_angular_daw\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\netprojects\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj",
+        "projectUniqueName": "C:\\proyectos_angular_daw\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj",
         "projectName": "Alask.BL",
-        "projectPath": "C:\\netprojects\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj",
-        "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\netprojects\\BackendAlask\\AlaskSolucion\\Alask.BL\\obj\\",
+        "projectPath": "C:\\proyectos_angular_daw\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj",
+        "packagesPath": "C:\\Users\\pauli\\.nuget\\packages\\",
+        "outputPath": "C:\\proyectos_angular_daw\\BackendAlask\\AlaskSolucion\\Alask.BL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\pauli\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

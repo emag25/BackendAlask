@@ -8,10 +8,13 @@ namespace Alask.BL
         public string? tipo { get; set; }
         public string? numero { get; set; }
         public int? mes { get; set; }
-        public int? year { get; set; }
+        public int? año { get; set; }
         public int? cvv { get; set; }
 
         public Usuarios? usuario { get; set; }
+
+        public string? Transaccion { get; set; }
+
 
 
 

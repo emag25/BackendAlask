@@ -88,9 +88,33 @@ namespace Alask.API
             }
 
         }
+
+        [Route("[action]")]
+        [HttpPost]
+        public async Task<ActionResult<Response>> Set([FromBody] Usuarios u)
+        {
+            var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
+            XDocument xmlParam = DBXmlMethods.GetXml(u);
+            DataSet dsResultado = await DBXmlMethods.EjecutaBase(SPNames.SetUsuarios, cadenaConexion,u.Transaccion, xmlParam.ToString());
+            Response objResponse = new Response();
+            if (dsResultado.Tables.Count > 0)
+            {
+                try
+                {
+                    objResponse.Respuesta = dsResultado.Tables[0].Rows[0]["Respuesta"].ToString();
+                }
+                catch (Exception e)
+                {
+                    objResponse.Respuesta = "---- ERROR ---- ";
+                }
+
+            }
+            return Ok(objResponse);
+        }
+
     }
 
-  
+
 }
 
 

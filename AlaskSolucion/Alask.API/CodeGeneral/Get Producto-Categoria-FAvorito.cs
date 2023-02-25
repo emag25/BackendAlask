@@ -20,5 +20,11 @@ namespace Alask.API.CodeGeneral
 
         public const string SetFavoritos = "Favorito_setFavorito";
 
+        public const string SetUsuarios = "User_Setuser";
+
+        public const string SetTarjetas = "Tarjeta_Settarjeta";
+
+
+
     }
 }
