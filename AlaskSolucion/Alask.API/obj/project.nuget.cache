@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Hz8q+s94SL7ypMPYjP+gDiU1+N2Ce9NkmUsvChYM+SZoo6EqHKeE90mwnQYMw9dMjJwC47QKcbWr3GjHsMfxmA==",
+  "dgSpecHash": "hXTTYlUy0YU8u8tg1Ti1zBWr+HsN0dxjbbesTF8A7ttPQ7bxpI3MR6E6Zr4kXEdvC2oW6byWrYKimbxQB8m0xA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.API\\Alask.API.csproj",
+  "projectFilePath": "C:\\netprojects\\BackendAlask\\AlaskSolucion\\Alask.API\\Alask.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\usuario\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\usuario\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",

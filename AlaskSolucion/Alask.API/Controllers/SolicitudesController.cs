@@ -10,7 +10,8 @@ namespace Alask.API {
     [ApiController]
     [Route("api/[controller]")]
 
-    public class SolicitudesController : Controller {
+    public class SolicitudesController : Controller
+    {
 
 
         [Route("[action]")]
@@ -56,6 +57,36 @@ namespace Alask.API {
             return Ok(listData);
         }
 
+
+
+
+        [Route("[action]")]
+        [HttpPost]
+        public async Task<ActionResult<Response>> Set([FromBody] Solicitud s)
+        {
+            var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
+            XDocument xmlParam = DBXmlMethods.GetXml(s);
+            DataSet dsResultado = await DBXmlMethods.EjecutaBase(SPNames.SetSolicitudes, cadenaConexion, s.Transaccion, xmlParam.ToString());
+
+            Response objResponse = new Response();
+
+            if (dsResultado.Tables.Count > 0)
+            {
+                try
+                {
+                    objResponse.Respuesta = dsResultado.Tables[0].Rows[0]["MENSAJE"].ToString();
+                }
+                catch (Exception e)
+                {
+                    objResponse.Respuesta = "---- ERROR ---- ";
+                }
+
+            }
+            return Ok(objResponse);
+        }
+
+
+        
 
     }
 

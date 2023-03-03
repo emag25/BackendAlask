@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SCb8EV2Jl/QnSYp5I7MEHNY7naA0la3m2Ac9seMGrOZ8/RSr+QZj1k6sC3IHJ2oJTbHTyfvGKdY3HxmX0UDrzQ==",
+  "dgSpecHash": "+VIXeKxDiPSoUGykntoxlVlVZcb8mMLOw/HadUcEvdeGwtqBmY7Bp62v8+CIhmweRWLfTBFnB0iKXH1/+WkN2w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj",
+  "projectFilePath": "C:\\netprojects\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
