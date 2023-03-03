@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\AlaskSolucion",
+    "\\AlaskSolucion\\Alask.API",
+    "\\AlaskSolucion\\Alask.API\\CodeGeneral",
+    "\\AlaskSolucion\\Alask.API\\Controllers",
+    "\\AlaskSolucion\\Alask.BL",
+    "\\AlaskSolucion\\Alask.BL\\models"
+  ],
+  "SelectedNode": "\\AlaskSolucion\\Alask.API\\Program.cs",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,11 +1,12 @@
-﻿using Alask.API.CodeGeneral;
+using Alask.API.CodeGeneral;
 using Alask.BL;
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
 using System.Xml.Linq;
 
 
-namespace Alask.API {
+namespace Alask.API
+{
 
     [ApiController]
     [Route("api/[controller]")]

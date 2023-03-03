@@ -8,24 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\usuario\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\netprojects\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj",
+      "projectUniqueName": "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj",
       "projectName": "Alask.BL",
-      "projectPath": "C:\\netprojects\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj",
-      "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\netprojects\\BackendAlask\\AlaskSolucion\\Alask.BL\\obj\\",
+      "projectPath": "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.BL\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

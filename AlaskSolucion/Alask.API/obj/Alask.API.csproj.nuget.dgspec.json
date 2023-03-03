@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\netprojects\\BackendAlask\\AlaskSolucion\\Alask.API\\Alask.API.csproj": {}
+    "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.API\\Alask.API.csproj": {}
   },
   "projects": {
-    "C:\\netprojects\\BackendAlask\\AlaskSolucion\\Alask.API\\Alask.API.csproj": {
+    "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.API\\Alask.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\netprojects\\BackendAlask\\AlaskSolucion\\Alask.API\\Alask.API.csproj",
+        "projectUniqueName": "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.API\\Alask.API.csproj",
         "projectName": "Alask.API",
-        "projectPath": "C:\\netprojects\\BackendAlask\\AlaskSolucion\\Alask.API\\Alask.API.csproj",
-        "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\netprojects\\BackendAlask\\AlaskSolucion\\Alask.API\\obj\\",
+        "projectPath": "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.API\\Alask.API.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.API\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\netprojects\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj": {
-                "projectPath": "C:\\netprojects\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj"
+              "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj": {
+                "projectPath": "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj"
               }
             }
           }
@@ -84,21 +80,17 @@
         }
       }
     },
-    "C:\\netprojects\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj": {
+    "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\netprojects\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj",
+        "projectUniqueName": "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj",
         "projectName": "Alask.BL",
-        "projectPath": "C:\\netprojects\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj",
-        "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\netprojects\\BackendAlask\\AlaskSolucion\\Alask.BL\\obj\\",
+        "projectPath": "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.BL\\Alask.BL.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\OneDrive\\Documentos\\GitKraken\\BackendAlask\\AlaskSolucion\\Alask.BL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
