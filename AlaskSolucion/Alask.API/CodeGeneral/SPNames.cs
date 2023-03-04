@@ -13,7 +13,7 @@
         public const string GetProveedores = "GetProveedores";
 
         public const string GetSolicitudes = "GetSolicitudes";
-        //
+        
         public const string SetCategorias = "Categoria_setCategoria";
 
         public const string SetProductos = "Producto_setProducto";
