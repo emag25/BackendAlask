@@ -14,12 +14,13 @@ namespace Alask.API
     public class ProductosController : Controller
     {
         [Route("[action]")]
-        [HttpPost]
-        public async Task<ActionResult<Producto>> Get([FromBody] Producto p)
+        [HttpGet]
+        public async Task<ActionResult<Producto>> ConsultarProductos()
         {
+            Producto p = new Producto();
             var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
             XDocument xmlParam = DBXmlMethods.GetXml(p);
-            DataSet dsResultado = await DBXmlMethods.EjecutaBase(SPNames.GetProductos, cadenaConexion, p.Transaccion, xmlParam.ToString());
+            DataSet dsResultado = await DBXmlMethods.EjecutaBase(SPNames.GetProductos, cadenaConexion, "consultar_todo", xmlParam.ToString());
             List<Producto> listData = new List<Producto>();
 
             if (dsResultado.Tables.Count > 0)
@@ -57,11 +58,33 @@ namespace Alask.API
 
         [Route("[action]")]
         [HttpPost]
-        public async Task<ActionResult<Response>> Set([FromBody] Producto p)
+        public async Task<ActionResult<Response>> AgregarNuevoProducto([FromBody] Producto p)
         {
             var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
             XDocument xmlParam = DBXmlMethods.GetXml(p);
-            DataSet dsResultado = await DBXmlMethods.EjecutaBase(SPNames.SetProductos, cadenaConexion, p.Transaccion, xmlParam.ToString());
+            DataSet dsResultado = await DBXmlMethods.EjecutaBase(SPNames.SetProductos, cadenaConexion, "insertar", xmlParam.ToString());
+            Response objResponse = new Response();
+            if (dsResultado.Tables.Count > 0)
+            {
+                try
+                {
+                    objResponse.Respuesta = dsResultado.Tables[0].Rows[0]["Respuesta"].ToString();
+                }
+                catch (Exception e)
+                {
+                    objResponse.Respuesta = "---- ERROR ---- ";
+                }
+
+            }
+            return Ok(objResponse);
+        }
+        [Route("[action]")]
+        [HttpPut]
+        public async Task<ActionResult<Response>> ModificarDatos([FromBody] Producto p)
+        {
+            var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
+            XDocument xmlParam = DBXmlMethods.GetXml(p);
+            DataSet dsResultado = await DBXmlMethods.EjecutaBase(SPNames.SetProductos, cadenaConexion, "actualizar_datos", xmlParam.ToString());
             Response objResponse = new Response();
             if (dsResultado.Tables.Count > 0)
             {
@@ -78,6 +101,28 @@ namespace Alask.API
             return Ok(objResponse);
         }
 
+        [Route("[action]")]
+        [HttpPut]
+        public async Task<ActionResult<Response>> ModificarEstado([FromBody] Producto p)
+        {
+            var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
+            XDocument xmlParam = DBXmlMethods.GetXml(p);
+            DataSet dsResultado = await DBXmlMethods.EjecutaBase(SPNames.SetProductos, cadenaConexion, "actualizar_datos", xmlParam.ToString());
+            Response objResponse = new Response();
+            if (dsResultado.Tables.Count > 0)
+            {
+                try
+                {
+                    objResponse.Respuesta = dsResultado.Tables[0].Rows[0]["Respuesta"].ToString();
+                }
+                catch (Exception e)
+                {
+                    objResponse.Respuesta = "---- ERROR ---- ";
+                }
+
+            }
+            return Ok(objResponse);
+        }
     }
 
 }
