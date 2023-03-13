@@ -107,7 +107,7 @@ namespace Alask.API
         {
             var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
             XDocument xmlParam = DBXmlMethods.GetXml(p);
-            DataSet dsResultado = await DBXmlMethods.EjecutaBase(SPNames.SetProductos, cadenaConexion, "actualizar_datos", xmlParam.ToString());
+            DataSet dsResultado = await DBXmlMethods.EjecutaBase(SPNames.SetProductos, cadenaConexion, "actualizar_estado", xmlParam.ToString());
             Response objResponse = new Response();
             if (dsResultado.Tables.Count > 0)
             {
