@@ -1,4 +1,4 @@
-﻿using Alask.API.CodeGeneral;
+using Alask.API.CodeGeneral;
 using Alask.BL;
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
@@ -11,8 +11,7 @@ namespace Alask.API
     [ApiController]
     [Route("api/[controller]")]
 
-    public class ProveedoresController : Controller
-    {
+    public class ProveedoresController : Controller {
 
 
         [Route("[action]")]
@@ -28,7 +27,7 @@ namespace Alask.API
             {
                 try
                 {
-                    foreach (DataRow row in dsResultado.Tables[0].Rows)
+                    foreach(DataRow row in dsResultado.Tables[0].Rows) 
                     {
                         Proveedor objResponse = new Proveedor
                         {
@@ -49,14 +48,68 @@ namespace Alask.API
                         listData.Add(objResponse);
                     }
 
-                }
-                catch (Exception ex)
+                }catch(Exception ex)
                 {
-                    Console.WriteLine("---- ERROR ---- " + ex.Message);
+                    Console.WriteLine("---- ERROR ---- "+ex.Message);
                 }
             }
 
             return Ok(listData);
+        }
+
+
+
+
+        [Route("[action]")]
+        [HttpPut]
+        public async Task<ActionResult> Update([FromBody] Proveedor s)
+        {
+            var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
+            XDocument xmlParam = DBXmlMethods.GetXml(s);
+            DataSet dsResultado = await DBXmlMethods.EjecutaBase(SPNames.SetProveedores, cadenaConexion, s.Transaccion, xmlParam.ToString());
+
+            Response objResponse = new Response();
+
+            if (dsResultado.Tables.Count > 0)
+            {
+                try
+                {
+                    objResponse.Respuesta = dsResultado.Tables[0].Rows[0]["MENSAJE"].ToString();
+
+                }
+                catch (Exception e)
+                {
+                    objResponse.Respuesta = "---- ERROR ---- ";
+                }
+            }
+            return Ok(objResponse);
+        }
+
+
+
+        [Route("[action]")]
+        [HttpDelete]
+        public async Task<ActionResult> Delete([FromBody] Proveedor s)
+        {
+            var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
+            XDocument xmlParam = DBXmlMethods.GetXml(s);
+            DataSet dsResultado = await DBXmlMethods.EjecutaBase(SPNames.SetProveedores, cadenaConexion, s.Transaccion, xmlParam.ToString());
+
+            Response objResponse = new Response();
+
+            if (dsResultado.Tables.Count > 0)
+            {
+                try
+                {
+                    objResponse.Respuesta = dsResultado.Tables[0].Rows[0]["MENSAJE"].ToString();
+
+                }
+                catch (Exception e)
+                {
+                    objResponse.Respuesta = "---- ERROR ---- ";
+                }
+            }
+            return Ok(objResponse);
         }
 
     }
