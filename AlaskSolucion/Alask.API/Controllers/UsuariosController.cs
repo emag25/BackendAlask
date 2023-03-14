@@ -81,6 +81,26 @@ namespace Alask.API
                     return Ok();
                 }
             }
+            else if (nombreprocedimiento == "Verificar")
+            {
+                var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
+                XDocument xmlParam = DBXmlMethods.GetXml(usuarios);
+                DataSet dsResultado = await DBXmlMethods.EjecutaBase("user_Getuser", cadenaConexion, "Verificar", xmlParam.ToString());
+
+                List<Usuarios> listData = new List<Usuarios>();
+
+                if (dsResultado.Tables[0].Rows.Count > 0)
+                {
+                    string JSONstring = string.Empty;
+                    JSONstring = JsonConvert.SerializeObject(dsResultado.Tables[0]);
+                    return Ok(JSONstring);
+
+                }
+                else
+                {
+                    return Ok();
+                }
+            }
             else
             {
                 return BadRequest();
