@@ -1,0 +1,19 @@
+# Visual Studio build files
+*.dll
+*.exe
+*.pdb
+*.obj
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*log
+*Bin
+*obj
