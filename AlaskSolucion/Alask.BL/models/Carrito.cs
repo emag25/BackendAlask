@@ -11,9 +11,6 @@
         public float? Total { get; set; }
 
         public string? Estado { get; set; }
-        
-        public string? Transaccion { get; set; }
-
 
 
     }
