@@ -6,11 +6,20 @@
 
         public int? Carrito { get; set; }
 
-        public int? Tarjeta { get; set; }
-        
+        public string? Usuario { get; set; }
+
+        public string? Email { get; set; }
+
+        public string? Telefono { get; set; }
+
+        public string? Provincia { get; set; }
+
+        public string? Direccion { get; set; }
+
+        public float? Total { get; set; }
+
         public string? Estado { get; set; }
 
-        public DateOnly? Fecha { get; set; }
 
     }
 }

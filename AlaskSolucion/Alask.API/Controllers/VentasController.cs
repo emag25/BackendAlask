@@ -19,7 +19,7 @@ namespace Alask.API
         {
             var cadenaConexion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["conexion_bd"];
             XDocument xmlParam = DBXmlMethods.GetXml(p);
-            DataSet dsResultado = await DBXmlMethods.EjecutaBase(SPNames.GetVentas, cadenaConexion, p.Transaccion, xmlParam.ToString());
+            DataSet dsResultado = await DBXmlMethods.EjecutaBase(SPNames.GetVentas, cadenaConexion,"consultar_todo", xmlParam.ToString());
             List<Venta> listData = new List<Venta>();
 
             if (dsResultado.Tables.Count > 0)
@@ -28,13 +28,16 @@ namespace Alask.API
                 {
                     foreach (DataRow row in dsResultado.Tables[0].Rows)
                     {
-                        Venta objResponse = new Venta {                      
+                        Venta objResponse = new Venta {
                             Id = Convert.ToInt32(row["id_ventas"]),
-                            Usuario = Convert.ToInt32(row["usuario_id_ventas"]),
                             Carrito = Convert.ToInt32(row["carritos_id_ventas"]),
-                            Tarjeta = Convert.ToInt32(row["tarjeta_id_ventas"]),
-                            Estado = row["estado_ventas"].ToString(),
-                            Fecha = DateOnly.FromDateTime(DateTime.Parse(row["fecha_ventas"].ToString()))
+                            Usuario = row["usuario_id_ventas"].ToString(),
+                            Email = row["email_usuario"].ToString(),
+                            Telefono = row["telefono_usuario"].ToString(),
+                            Provincia = row["nombre_provincia"].ToString(),
+                            Direccion = row["direccion_usuario"].ToString(),
+                            Total = float.Parse(row["total_carrito"].ToString()),
+                            Estado = row["estado_ventas"].ToString()
                         };
                         listData.Add(objResponse);
 

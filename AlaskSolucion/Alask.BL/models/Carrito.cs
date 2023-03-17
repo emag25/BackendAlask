@@ -3,14 +3,12 @@
     public class Carrito
     {
         public int? Id { get; set; }
-        public int? Usuario { get; set; }
-        public float? Subtotal { get; set; }
+        public int? Id_item { get; set; }
+        public string? Nombre { get; set; }
 
-        public float? Impuestos { get; set; }
+        public int? Cantidad { get; set; }
 
         public float? Total { get; set; }
-
-        public string? Estado { get; set; }
 
 
     }

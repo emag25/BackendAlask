@@ -127,3 +127,4 @@ C:\Users\HP\Desktop\ANGULAR\GitKraken\BackendAlask\AlaskSolucion\Alask.API\obj\D
 C:\Users\HP\Desktop\ANGULAR\GitKraken\BackendAlask\AlaskSolucion\Alask.API\obj\Debug\net6.0\Alask.API.pdb
 C:\Users\HP\Desktop\ANGULAR\GitKraken\BackendAlask\AlaskSolucion\Alask.API\obj\Debug\net6.0\Alask.API.genruntimeconfig.cache
 C:\Users\HP\Desktop\ANGULAR\GitKraken\BackendAlask\AlaskSolucion\Alask.API\obj\Debug\net6.0\ref\Alask.API.dll
+C:\Users\HP\Desktop\ANGULAR\GitKraken\BackendAlask\AlaskSolucion\Alask.API\bin\Debug\net6.0\Newtonsoft.Json.dll
