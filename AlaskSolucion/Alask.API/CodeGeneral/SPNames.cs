@@ -18,6 +18,8 @@
 
         public const string GetVentas = "Ventas_GetVentas";
 
+        public const string SetVentas = "Ventas_SetVentas";
+
         public const string SetCategorias = "Categoria_setCategoria";
 
         public const string SetProductos = "Producto_setProducto";
